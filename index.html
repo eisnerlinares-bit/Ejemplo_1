@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¿Qué tan bien conoces a Eisner?</title>
+  <meta name="description" content="Un quiz para ver cuánto sabes sobre Eisner.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <aside class="vessel-wrap" aria-hidden="true">
+      <div class="vessel">
+        <div class="vessel-fill" id="vesselFill"></div>
+      </div>
+    </aside>
+
+    <section class="quiz" aria-live="polite">
+      <header class="intro">
+        <h1>¿Qué tan bien conoces a Eisner?</h1>
+        <p id="progressText">Cada respuesta correcta llena el recipiente.</p>
+      </header>
+
+      <div id="questionView" hidden>
+        <p class="counter" id="counter"></p>
+        <h2 id="questionText"></h2>
+
+        <form id="textForm" class="text-answer" hidden autocomplete="off">
+          <label for="textInput" class="visually-hidden">Tu respuesta</label>
+          <input id="textInput" type="text" placeholder="Escribe tu respuesta" required>
+          <button type="submit" class="btn">Responder</button>
+        </form>
+
+        <ul id="options" class="options"></ul>
+
+        <div id="feedback" class="feedback" hidden>
+          <p id="feedbackText"></p>
+          <button type="button" class="btn" id="nextBtn">Siguiente pregunta</button>
+        </div>
+      </div>
+
+      <div id="startView">
+        <p class="lead">Cinco preguntas sobre su nombre, sus gustos y lo que le gusta jugar, escuchar y comer.</p>
+        <button type="button" class="btn" id="startBtn">Empezar</button>
+      </div>
+
+      <div id="resultView" hidden>
+        <p class="score" id="scoreText"></p>
+        <p class="lead" id="resultMessage"></p>
+        <button type="button" class="btn" id="restartBtn">Jugar de nuevo</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
