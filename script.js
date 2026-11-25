@@ -2,12 +2,10 @@
 // type: "text" (respuesta escrita) o "choice" (opción múltiple).
 const questions = [
   {
-  {
     type: "text",
     text: "¿Cuál es el segundo nombre de Eisner?",
     answers: ["smith"],
     fact: "Su segundo nombre es Smith."
-  },
   },
   {
     type: "choice",
